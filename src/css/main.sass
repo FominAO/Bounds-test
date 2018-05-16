@@ -1,0 +1,23 @@
+.scroll
+  perspective: 1px
+  height: 100vh
+  overflow-x: hidden
+  overflow-y: auto
+  &__layer
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    &_back
+      transform: translateZ(-2px) scale(3)
+      margin-top: 200px
+    &_middle
+      transform: translateZ(-1px) scale(2)
+      margin-top: 300px
+    &_tille
+      transform: translateZ(0)
+      margin-top: 200px
+    &_front
+      transform: translateZ(0)
+      margin-top: 500px

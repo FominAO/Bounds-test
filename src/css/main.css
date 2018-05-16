@@ -1,0 +1,30 @@
+.scroll {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scroll__layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.scroll__layer_back {
+  transform: translateZ(-2px) scale(3);
+  margin-top: 200px;
+}
+.scroll__layer_middle {
+  transform: translateZ(-1px) scale(2);
+  margin-top: 300px;
+}
+.scroll__layer_title {
+  transform: translateZ(0);
+  margin-top: 200px;
+}
+.scroll__layer_front {
+  transform: translateZ(0);
+  margin-top: 500px;
+}
