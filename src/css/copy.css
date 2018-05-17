@@ -1,0 +1,50 @@
+.scroll {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scroll__layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.scroll__layer_back {
+  transform: translateZ(-4px) scale(5);
+  margin-top: 100px;
+}
+.scroll__layer_middle {
+  transform: translateZ(-2px) scale(3);
+  margin-top: 500px;
+}
+.scroll__layer_title {
+  transform: translateZ(-1px) scale(2);
+  margin-top: 200px;
+  
+}
+.logo {
+  position: absolute;
+  right: 200px;
+  top: 180px;
+}
+.sign {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+  font-size: 267px;
+  position: absolute;
+  top: 0;
+  right: 1px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.sign_shadow {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+}
+.scroll__layer_front {
+  transform: translateZ(0);
+  margin-top: 100vh;
+}
