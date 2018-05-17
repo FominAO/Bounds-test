@@ -14,6 +14,5 @@ export default function scroll (name, index) {
   
   newPosY = newPosY + 'px';
   layer.style.backgroundPositionY = newPosY;
-  console.log(name);
 }
 }

@@ -8,42 +8,26 @@ export default class Record {
     this.dislikes = dislikes;
   }
   render() {
-    self=this
-      let userName = `<div class='user-name'>
-            ${this.user.username}
-                        </div>`
-      let location = this.location ? `<div class='user-location'>
-                            ${this.location}
-                        </div>`:''
-      let caption = this.caption ? `<div class='user-caption'> 
-                                            ${this.caption}
-                                        </div>`: ''
-        let header = `<div class='user-header'>
-                        <div class='user'>
-                            <div class='user-pic'> 
-                                <img src='${this.user.profile_picture}'>
-                            </div>
-                            <div class='user-info'> 
-                                ${userName}
-                                ${location}
-                            </div>
-                        </div>
-                        
-                        <div>
-                            ${this.time}
-                        </div>
-                        
-                        
-                     </div>`
-        let likes = `<div class='like'>
-                        <img src='./img/heart.png' onclick='alert("${self.id}")'>
-                        <span>${this.likes}<span>
-                    </div>`
-        let mainPic = `<img class='main-image' src = ${this.img}>`
-        let template = document.createElement('div')
-        template.innerHTML = mainPic + header + likes + caption
-        template.className = 'record'
-        return template
+     let img = '<div class="img"></div>';
+     let label = '<div class="label">Компания Райффайзенбанк ищет на "Моём круге" специалиста, похожего на вас. Вот вакансии, которые они разместили за последние 24 часа:</div>';
+     let like = '<span class="like"><span class="like-icon"></span>10</span>';
+     let comment = '<span class="comment"><span class="comment-icon"></span>20</span>';
+     let view = '<span class="view"><span class="view-icon"></span>30</span>';
+     let media = '<div class="media">' + like + comment + view + '</div>';
+     let content = '<div class="content">' + label + media + '</div>'
+     let template = document.createElement('div')
+     template.innerHTML = img + content;
+     template.className = 'record';
+     document.body.getElementsByClassName("container")[0].appendChild(template);
+     document.body.getElementsByClassName("more-container")[0].remove()
+     let more = document.createElement('div');
+     more.className = 'more-container'
+     more.innerHTML = '<a class="more">Show more...</a>'
+     document.body.getElementsByClassName("container")[0].appendChild(more);
+     document.getElementsByClassName("more")[0].onclick = () => { 
+      const newRecord = new Record;
+      newRecord.render()}
 
+  
   }
 }
