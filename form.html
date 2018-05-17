@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Record</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #afafaf;
+      background-image: url('./src/img/front-wave.png');
+      background-repeat: no-repeat;
+      background-position: top;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+    .scroll__layer scroll__layer_front {
+
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 100px; 
+      background-color: white;
+      width: 960px;
+      justify-content: center;
+    }
+    .record {
+      background-color: #dfdfdf;
+      margin: 10px;
+      width: 440px;
+      height: 150px;
+      box-shadow: 2px 2px 3px grey;
+      display: flex;
+      align-content: center;
+    }
+    .record:nth-child(even) {
+
+    }
+    .img {
+      background-image: url("./src/img/logo.png");
+      height: 100px;
+      width: 100px;
+      margin: 25px 5px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .content {
+      width: 335px;
+      height: 140px;
+      margin: 5px;
+      display: block;
+    }
+    .label {
+      text-align: justify;
+      top: 5px;
+      margin-bottom: 10px;
+    }
+    .media {
+      display: inline;
+    }
+    .like-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url("./src/img/logo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .comment-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url("./src/img/logo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .view-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url("./src/img/logo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll__layer scroll__layer_front">
+    <!-- <img src="./src/img/front-wave.png" alt=""> -->
+    <div class="container">
+      <div class="record">
+        <div class="img">
+        </div>
+        <div class="content">
+          <div class="label">
+            <!-- <img src="./src/img/logo.png" width="100px" height="100px" alt="blog">   -->
+          </div>
+          <div class="media">
+            <span class="like">10</span>
+            <span class="coment">20</span>
+            <span class="view">30</span>
+          </div>  
+        </div>
+      </div>
+      <div class="record">
+          <div class="img">
+          </div>
+          <div class="content">
+            <div class="label">
+                Компания Райффайзенбанк ищет на "Моём круге" специалиста, похожего на вас. Вот вакансии, которые они разместили за последние 24 часа:
+            </div>
+            <div class="media">
+              <span class="like"><span class="like-icon"></span>10</span>
+              <span class="comment"><span class="comment-icon"></span>20</span>
+              <span class="view"><span class="view-icon"></span>30</span>
+            </div>  
+          </div>
+        </div>
+        <div class="record">
+            <div class="img">
+            </div>
+            <div class="content">
+              <div class="label">
+                  Компания Райффайзенбанк ищет на "Моём круге" специалиста, похожего на вас. Вот вакансии, которые они разместили за последние 24 часа:
+              </div>
+              <div class="media">
+                <span class="like"><span class="like-icon"></span>10</span>
+                <span class="comment"><span class="comment-icon"></span>20</span>
+                <span class="view"><span class="view-icon"></span>30</span>
+              </div>  
+            </div>
+          </div>
+      </div>
+    </div>
+    
+  </div>  
+</body>
+</html>
