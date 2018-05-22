@@ -1,11 +1,9 @@
-.record
-  background-color: #ffffff
-  margin: 10px
-  width: 440px
-  height: 150px
-  box-shadow: 1px 1px 3px #d1d1d1
+.filler
+  background-color: #fafafa
+  width: 100%
   display: flex
-  align-content: center
+  justify-content: center
+  flex-wrap: wrap
 .img 
   background-image: url("../img/logo.png")
   height: 100px
@@ -15,7 +13,7 @@
   background-repeat: no-repeat
   background-position: center
 .content 
-  width: 335px
+  width: 290px
   height: 140px
   margin: 5px
   display: block
@@ -49,3 +47,22 @@
   background-size: contain
   background-repeat: no-repeat
   background-position: center
+.record
+  background-color: #ffffff
+  margin: 30px
+  width: 400px
+  height: 150px
+  display: flex
+  align-content: center
+  &__big
+    @extend .record
+    width: 860px
+    height: 360px
+    &_img
+      @extend .img
+      height: 300px
+      width: 300px
+    &_content
+      @extend .content
+      width: 510px
+      height: 350px

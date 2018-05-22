@@ -1,0 +1,13 @@
+<svg version="1.1" id="wave2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3000 3000">
+        <style type="text/css">
+          .wave2_2 {
+            fill: url(#SVGID_2_);
+          }
+        </style>
+        <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="8" y1="1112.5" x2="2997.002" y2="1112.5">
+          <stop offset="0" style="stop-color:#00C2C6" />
+          <stop offset="0.4484" style="stop-color:#00D8C3" />
+          <stop offset="1" style="stop-color:#00F0C0" />
+        </linearGradient>
+        <path class="wave2_2" d="M0,1056c0,0,509-492,1661-672S3000,0,3000,0v3000H0V1056z" />
+      </svg>

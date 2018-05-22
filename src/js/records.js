@@ -9,7 +9,7 @@ export default class Record {
   }
   render() {
      let img = '<div class="img"></div>';
-     let label = '<div class="label">Компания Райффайзенбанк ищет на "Моём круге" специалиста, похожего на вас. Вот вакансии, которые они разместили за последние 24 часа:</div>';
+     let label = '<div class="label">Компания Bounds ищет на "Моём круге" специалиста, похожего на вас. Вот вакансии, которые они разместили за последние 24 часа:</div>';
      let like = '<span class="like"><span class="like-icon"></span>10</span>';
      let comment = '<span class="comment"><span class="comment-icon"></span>20</span>';
      let view = '<span class="view"><span class="view-icon"></span>30</span>';

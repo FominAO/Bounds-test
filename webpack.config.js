@@ -8,7 +8,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry:  './src/js/app.js',
+    entry: { 
+        app: './src/js/app.js',
+        buisness: './src/js/buisness.js',
+    },
     output: {
         filename: 'js/[name].js',
         path: path.resolve(__dirname, 'dist'),
@@ -36,6 +39,15 @@ module.exports = {
               ]
             },
             {
+                test: /\.ttf$/,
+                use: {
+                  loader: "file-loader",
+                  options: {
+                    name: "css/fonts/[name].[ext]",
+                  },
+                },
+              },
+            {
                 test: /\.sass$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader', 'sass-loader'],
@@ -54,8 +66,15 @@ module.exports = {
             'css/[name].css'
         ),
         new HtmlWebpackPlugin ({
-          template: 'src/index.html'
+          filename: 'index.html',
+          template: 'src/index.html',
+          chunks: ['app']
         }),
+        new HtmlWebpackPlugin ({
+            filename: 'buisness.html',
+            template: 'src/buisness.html',
+            chunks: ['buisness']
+          }),
         new CleanWebpackPlugin (['dist'])
     ],
         
