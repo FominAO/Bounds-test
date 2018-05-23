@@ -1,7 +1,10 @@
 body
+  margin: 0
+  padding: 0
   display: flex
   justify-content: center
-  background-color: #f7f7f7
+  background-color: #fafafa
+  font-family: Centuary Gothic, Helvetica, sans-serif
 a
   text-decoration: none
   color: #c7c7c7
@@ -20,12 +23,21 @@ a
     justify-content: space-between
   &__logo
     margin-left: 5px
-
 .tools
-
-  margin-left: 135px
   display: flex
   justify-content: right
+.title__container
+  width: 960px
+  height: 300px
+  display: block
+.title-label
+  position: relative
+  height: 80px
+  width: 140px
+  top: -329px
+  right: -8px
+  font-size: 16pt
+  color: white
 .scroll__layer
   position: absolute
   top: 0
@@ -42,7 +54,8 @@ a
     transition: 400ms
   &_title
     margin-top: 200px
-    display: block
+    display: flex
+    justify-content: center
     z-index: -3
   &_front
     margin-top: 100px
@@ -56,14 +69,14 @@ a
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
   color: #f7f7f7
   font-size: 267px
-  top: 0
-  right: 1px
   text-shadow:  0 0 2px black
-  float: right
+  &-main
+    position: relative
+    top: -329px
+    left: 5px
   &_shadow 
-    position: absolute
-    top: 4px
-    right: 5px
+    position: relative
+
 .logo
   position: absolute
   top: 200px
@@ -84,7 +97,8 @@ a
   bottom: 20px
   display: flex
   justify-content: center
-  
+.header__sign
+  display: none  
 #wave1, #wave2, #wave3
   width: 100%
 #logo_svg 
@@ -96,4 +110,39 @@ a
   width: 15px
   margin: 5px
   cursor: pointer
+.header__sign 
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  color: #f7f7f7
+  font-size: 267px
+  top: 0
+  right: 1px
+  text-shadow:  0 0 2px black
+  float: right
+  &_shadow 
+    position: absolute
+    top: 4px
+    right: 5px
+@media (max-width: 960px)
+  body 
+    min-width: 480px
+  .header
+    background-color: #afafaf
+  .scroll__layer
+    &_back
+      min-width: 480px
+    &_title
+      display: none
+      min-width: 480px
+    &_middle
+      margin-top: 250px
+      min-width: 480px
+    &_front
+      margin-top: -200px
+      min-width: 480px
+  .header__sign
+    display: initial
+    font-size: 50px
 
+  
+
+  

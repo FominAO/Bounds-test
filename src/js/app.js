@@ -10,8 +10,5 @@ document.getElementsByClassName("more")[0].onclick = () => {
   newRecord.render()}
 const mid = new Scroll("middle", 0.4, -1);
 const back = new Scroll("back", 0.2, 200);
-function timerCloud () {
-  mid.scroll();
-  back.scroll();
-}
-setTimeout(timerCloud, 1000)
+mid.scroll();
+back.scroll();
