@@ -5,6 +5,7 @@ export default class RecordList {
     this.number = number;
     this.json = require('../data.json');
     this.data = this.json.data
+    this.container = document.getElementsByClassName("record-container")[0]
     // this.big =json.big;
     // this.img = json.img;
     // this.label = json.label;
@@ -29,8 +30,8 @@ export default class RecordList {
     let record = new Record(this.data[i]);
     newBlock.appendChild(record.form());
     }
-    document.getElementsByClassName("container")[0].appendChild(newBlock)
-    document.body.getElementsByClassName("container")[0].appendChild(more);
+    this.container.appendChild(newBlock)
+    this.container.appendChild(more);
     document.getElementsByClassName("more")[0].onclick = () => { 
       const newBlock = new RecordList(this.number);
       newBlock.render()}
