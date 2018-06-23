@@ -34,40 +34,38 @@ function throttle(func, ms) {
 }
 export default class Scroll {
   
-  constructor () {
-  this.name = arguments[0];
+  constructor (name, speed, edge) {
+  this.name = name;
+  this.sign =  Math.sign(speed);
+  this.speed = Math.abs(speed);
   this.pagePos = window.pageYOffset;
   this.layer = document.getElementsByClassName("scroll__layer scroll__layer_" + this.name)[0];
-  this.myStyle = window.getComputedStyle(this.layer);
-  this.posY = this.myStyle.getPropertyValue('margin-top');
-  this.posY = this.posY.slice(0, -2);
-  this.index = arguments[1];
-  this.sign =  arguments[2]
-  this.edge = Math.abs(arguments[2]);
+  this.transform = this.layer.style.transform
+  // Получаем строку translateY(Ypx) и выделяем Y
+  this.posY = this.transform.slice(11, this.transform.length - 3)
+  this.edge = edge;
   }
   
   scrolling () {
     console.log("pY: " + this.posY + ", pP: " + this.pagePos + ' sign: '+ this.sign)
+    let layerStyle = this.layer
+    var newPosY = +this.posY + this.sign*(this.speed*window.pageYOffset);
     
-    var newPosY = +this.posY + Math.sign(this.sign)*(this.index*window.pageYOffset);
-    
-    if (this.sign > 0) {
-      if (newPosY <= this.edge) {
-        newPosY = newPosY + 'px';
-        document.getElementsByClassName("scroll__layer scroll__layer_" + this.name)[0].style.marginTop = newPosY;
+    if ((newPosY > 0) && (newPosY <= this.edge)) {
+        layerStyle.style.transform = `translateY(${newPosY}px)`;
+        // if (this.name == "back") {debugger}
       } 
-    } else {
-      if (newPosY >= this.edge) {
-        newPosY = newPosY + 'px';
-        document.getElementsByClassName("scroll__layer scroll__layer_" + this.name)[0].style.marginTop = newPosY;
-      }
-    }
+    // } else {
+    //   if (newPosY >= this.edge) {
+    //     layerStyle.style.transform = `translateY(${newPosY}px)`;
+    //   }
+    // }
     
     
     this.pagePos = window.pageYOffset;
-
+    
   }
     scroll () {
-      window.addEventListener("scroll", throttle(bind(this.scrolling, this), 10))
+      window.addEventListener("scroll", throttle(bind(this.scrolling, this), 1))
                 }
 }

@@ -83,8 +83,10 @@ hr {
   height: 0px; }
 
 @media (max-width: 1322px) {
-  .record {
+  .record-container {
     width: 90%; }
+  .record {
+    width: 100%; }
   .record-header {
     float: right;
     width: 50%; }
@@ -101,8 +103,13 @@ hr {
     width: 94%; } }
 
 @media (max-width: 1322px) and (max-width: 700px) {
+  .record-container {
+    width: 100%;
+    margin-top: 50px; }
   .record {
-    height: 24%; }
+    height: 24%;
+    width: 100%;
+    margin: 1px 0; }
   .record-header {
     float: none;
     width: 100%; }
@@ -134,17 +141,20 @@ a {
   display: flex;
   justify-content: center; }
   .header__container {
-    margin-top: 15px;
     width: 960px;
     height: auto;
     display: flex;
     justify-content: space-between; }
   .header__logo {
-    margin-left: 5px; }
+    margin-left: 5px;
+    display: flex;
+    align-items: center; }
 
 .tools {
   display: flex;
-  justify-content: right; }
+  justify-content: right;
+  align-items: center;
+  margin-right: 5px; }
 
 .title__container {
   width: 960px;
@@ -187,7 +197,7 @@ a {
     margin-top: 100px;
     z-index: 0; }
     .scroll__layer_front-svg {
-      margin-top: 500px;
+      margin-top: 400px;
       width: 100%;
       position: relative;
       bottom: -5px; }
@@ -244,8 +254,11 @@ a {
 #srch, #mark {
   height: 20px;
   width: 20px;
-  margin: 25px 20px;
+  margin: 25px 0px;
   cursor: pointer; }
+
+#mark {
+  margin-left: 50px; }
 
 .header__sign {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -271,12 +284,19 @@ a {
     width: auto; }
   .header {
     background-color: #0DC0C7; }
+  .scroll__layer_back {
+    transform: translateY(-100px); }
   .scroll__layer_title {
     display: none; }
   .scroll__layer_middle {
-    margin-top: 250px; }
-  .scroll__layer_front {
-    margin-top: -200px; }
+    margin-top: 0px;
+    transform: translateY(0px); }
   .header__sign {
     display: initial;
-    font-size: 50px; } }
+    font-size: 7vw;
+    line-height: 100px;
+    text-align: center; } }
+
+@media (max-width: 1322px) and (max-width: 700px) {
+  .scroll__layer_front-svg {
+    margin-top: 200px; } }

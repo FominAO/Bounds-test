@@ -16,16 +16,19 @@ a
   display: flex
   justify-content: center
   &__container 
-    margin-top: 15px
     width: 960px
     height: auto
     display: flex
     justify-content: space-between
   &__logo
     margin-left: 5px
+    display: flex
+    align-items: center
 .tools
   display: flex
   justify-content: right
+  align-items: center
+  margin-right: 5px
 .title__container
   width: 960px
   height: 300px
@@ -65,7 +68,7 @@ a
     margin-top: 100px
     z-index: 0
     &-svg 
-      margin-top: 500px
+      margin-top: 400px
       width: 100%
       position: relative
       bottom: -5px
@@ -114,8 +117,10 @@ a
 #srch, #mark 
   height: 20px
   width: 20px
-  margin: 25px 20px
+  margin: 25px 0px
   cursor: pointer
+#mark
+  margin-left: 50px
 .header__sign 
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
   color: #f7f7f7
@@ -141,20 +146,23 @@ a
     background-color: #0DC0C7
   .scroll__layer
     &_back
-
+      transform: translateY(-100px)
     &_title
       display: none
-
+      
     &_middle
-      margin-top: 250px
-
+      margin-top: 0px
+      transform: translateY(0px)
     &_front
-      margin-top: -200px
 
   .header__sign
     display: initial
-    font-size: 50px
-
+    font-size: 7vw
+    line-height: 100px
+    text-align: center
+  @media (max-width: 700px)
+    .scroll__layer_front-svg
+      margin-top: 200px
   
 
   
