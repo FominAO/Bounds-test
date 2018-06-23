@@ -183,7 +183,7 @@ a {
     transition: 800ms; }
   .scroll__layer_middle {
     width: 100%;
-    margin-top: 450px;
+    margin-top: 250px;
     z-index: -2;
     transition: 400ms; }
   .scroll__layer_title {
